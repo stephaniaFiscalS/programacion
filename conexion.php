@@ -1,10 +1,7 @@
-<?php
-
-	$mysqli=new mysqli("localhost","root","12345","proyecto"); //servidor, usuario de base de datos, contraseña del usuario, nombre de base de datos
-	
-	if(mysqli_connect_errno()){
-		echo 'Conexion Fallida : ', mysqli_connect_error();
-		exit();
-	}
+<?php 
+	$mysqli = new mysqli('localhost','root','','proyecto');
+	if ($mysqli->connect_errno):
+		echo "Error al conectarse con MYSQL debido al error ".$mysqli->connect_error;
+	endif;
 
 ?>
