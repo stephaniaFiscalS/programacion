@@ -1,0 +1,21 @@
+.Header{
+	padding: 60px;
+	text-align: center;
+	background: #333;
+	color: white;
+	font-size: 30px;
+	border-radius: 15px;
+}
+.btn_activar:link, .btn_activar:visited{
+	background-color: #333;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.btn_activar:hover, .btn_activar:active{
+	background-color: red;
+}
