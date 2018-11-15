@@ -1,9 +1,14 @@
-<?php 
-
-session_start();
-require 'funcs/conexion.php';
-require 'funcs/funcs.php';
+<?php
+	session_start();
+	require 'conexion.php';
+ 
+	$id_persona = $_GET['id_persona'];
+	
+	$sql = "DELETE FROM persona WHERE id_persona = '$id_persona'";
+	$resultado = $mysqli->query($sql);
+	
 ?>
+
 
 <!DOCTYPE html>
 <html> 
@@ -32,6 +37,12 @@ require 'funcs/funcs.php';
     <div class="leftcolumn">
       
       <div class="card" id="contenido" >
+      	<?php if($resultado) { ?>
+				<h3>REGISTRO ELIMINADO</h3>
+				<?php } else { ?>
+				<h3>ERROR AL ELIMINAR</h3>
+				<?php } ?>
+			<a href="../../index.php">Volver</a>
          
       </div>
     </div>
@@ -44,7 +55,6 @@ require 'funcs/funcs.php';
         <p style="text-align: center;"><?php echo $_SESSION['nombre_persona']; ?></p>
         <a href="logout.php"><button class="button" id="cerrar">Cerrar Sesion</button></a>
         <br>
-        <a href="php/crear/registrar.php"><button>Crear roles</button></a>
         <button id="emp">Empleados</button>
         <button id="usu">Usuario</button>
         <button id="vh">Vehiculos</button>

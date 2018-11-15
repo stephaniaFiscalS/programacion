@@ -1,0 +1,50 @@
+
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-danger hr {
+  border-top-color: #f1b0b7;
+}
+.alert-danger {
+  color: #491217;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+
+
+.btnModificar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.btnModificar:hover {
+    background-color: #555555;
+    color: white;
+}
